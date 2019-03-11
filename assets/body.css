@@ -1,0 +1,342 @@
+body {
+	font-family: "Lucida Console", Monaco, monospace;
+	margin: 0px;
+	padding: 0px;
+	background-color: white;
+}
+
+a {
+ text-decoration: none;
+ color: blue;
+}
+a:hover {
+ text-decoration: underline;
+}
+h1 {
+ font-size: 38px;
+ font-weight: lighter;
+ margin: 13px auto 20px auto;
+}
+h2 {
+ font-size: 28px;
+ font-weight: lighter;
+ margin: 12px auto 17px auto;
+}
+h3 {
+ font-size: 25px;
+ font-weight: lighter;
+ margin: 11px auto 16px auto;
+}
+h4 {
+ font-size: 18px;
+}
+h5 {
+ font-size: 14px;
+}
+h6 {
+ font-size: 10px;
+}
+hr {
+ border: 1px solid;
+ border-color: grey;
+ margin: 20px 0px;
+ display: block;
+}
+
+.hidden {
+	display: none;
+}
+
+/*
+* New classes
+*/
+.hidden {
+  display: none !important;
+}
+.floatLeft {
+  float: left !important;
+}
+.floatRight {
+  float: right !important;
+}
+.centerBlock {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.centerText {
+  text-align: center;
+}
+.centerChildren {
+  text-align: center;
+}
+.bold {
+  font-weight: bold;
+}
+.underline {
+  text-decoration: underline;
+}
+.smallText {
+  font-size: 0.85em;
+}
+.biggerText {
+  font-size: 1.15em;
+}
+
+.contentBody {
+ margin-top: 80px;
+}
+.container-full {
+  margin-left: auto;
+  margin-right: auto;
+}
+.container {
+ margin-left: auto;
+ margin-right: auto;
+ padding-left: 10px;
+ padding-right: 10px;
+}
+@media (min-width: 760px) {
+  .container {
+    width: 740px;
+  }
+}
+@media (min-width: 970px) {
+  .container {
+    width: 880px;
+  }
+}
+@media (min-width: 1250px) {
+  .container {
+    width: 1050px;
+  }
+}
+@media (min-width: 1550px) {
+  .container {
+    width: 1250px;
+  }
+}
+
+.smallOnly {
+ display: none;
+}
+.bigOnly {
+ display: block;
+}
+@media (max-width: 759px) {
+  .smallOnly {
+    display: block;
+  }
+  .bigOnly {
+    display: none;
+  }
+}
+.dateGrey {
+  color: grey;
+  font-style: italic;
+  font-size: .85em;
+}
+
+/* Navbar and Drawer */
+
+.navBar {
+ position: fixed;
+ left: 0;
+ right: 0;
+ top: 0;
+ background-color: #00050e;
+ box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+ padding: 0px;
+ margin: 0px;
+}
+.navBar ul {
+ margin: 0px;
+ list-style-type: none;
+ padding: 0px;
+}
+.navBar ul li {
+ float: left;
+}
+.navBar.collapsed ul li {
+ float: none !important;
+}
+.navBar ul li a {
+ display: block;
+ text-decoration: none;
+ color: #e6d719;
+ padding: 20px;
+ text-align: center;
+}
+.navBar.collapsed ul li a {
+ padding: 20px 10px !important;
+ border-bottom: 1px solid #083974;
+ text-align: left !important;
+}
+.navBar ul li a:hover {
+ background-color: #0f3eb6;
+}
+.navbar ul li .active {
+ background-color: #0f3eb6;
+}
+.navbar ul li .navBarRight {
+ float: right !important;
+}
+.drawerBtn {
+ margin-top: 15px;
+ margin-right: 12px;
+ display: block;
+ border: 1px solid white;
+ border-radius: 5px;
+ padding: 4px 7px !important;
+ /*overflow: hidden;*/
+}
+.drawerBtnBar {
+	display: block;
+	width: 18px;
+	height: 2px;
+	background-color: white;
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+.drawer {
+ background-color: white;
+ position: fixed;
+ top: 0;
+ left: 0;
+ height: 100vh;
+ width: 300px;
+ z-index: 99999;
+ box-shadow:0 16px 24px 2px rgba(0,0,0,.14),0 6px 30px 5px rgba(0,0,0,.12),0 8px 10px -5px rgba(0,0,0,.2)
+}
+.drawer ul {
+ list-style-type: none;
+ margin: 0px;
+ padding: 0px;
+}
+.drawer ul li a {
+ display: block;
+ padding: 20px;
+ text-decoration: none;
+ color: black;
+ /*width: 100%;*/
+}
+.drawer ul li a:hover {
+ background-color: #666;
+ color: white;
+}
+
+/* Animations */
+.rotateUp {
+  animation: rotateUp 0.35s ease-in-out forwards;
+}
+.rotateDown {
+  animation: rotateDown 0.35s ease-in-out forwards;
+}
+.appear {
+  animation: appear 0.35s ease-in-out forwards;
+}
+.hide {
+  animation: hide 0.35s ease-in-out forwards;
+}
+.fadeOutHalf {
+  animation: fadeOutHalf 0.25s ease-in-out forwards;
+}
+.fadeIn {
+  animation: fadeIn 0.25s ease-in-out forwards;
+}
+body {
+	transition: background-color 0.25s ease-in-out;
+}
+#body {
+	transition: opacity 0.25s ease-in-out;
+}
+.drawer {
+	transition: transform 0.25s ease-in-out;
+}
+
+@keyframes rotateUp {
+  0% {
+    transform:rotate(0deg)
+  }
+  100% {
+    transform:rotate(180deg)
+  }
+}
+@keyframes rotateDown {
+  0% {
+    transform:rotate(180deg)
+  }
+  100% {
+    transform:rotate(360deg)
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@keyframes hide {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes drawerAppear {
+  0% {
+    margin-left: -300px;
+    visibility: hidden;
+  }
+  100% {
+    margin-left: 0px;
+    visibility: visible;
+  }
+}
+@keyframes drawerHide {
+  0% {
+    margin-left: 0px;
+    visibility: visible;
+  }
+  100% {
+    margin-left: -300px;
+    visibility: hidden;
+  }
+}
+@keyframes fadeOutHalf {
+  0% {
+    opacity: 1;
+  }
+  0.1% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0.3;
+  }
+  99.9% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes toBlack {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-color: #424242
+  }
+}
