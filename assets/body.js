@@ -50,3 +50,5 @@ function hasParentWithClass (element, className) {
 		return hasParentWithClass(element.parent(), className);
 	}
 }
+
+particlesJS.load('yo', '/assets/nice.json', function() {});
