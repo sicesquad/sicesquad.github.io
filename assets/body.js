@@ -1,4 +1,4 @@
-/* global $ */
+/* global $, particlesJS */
 
 var drawer;
 
@@ -14,9 +14,6 @@ $(document).ready(function () {
 
 	// Menu buttons
 	$('.drawerBtn').click(function (a) {
-		// const target = $('#' + a.currentTarget.dataset.for);
-		// // target.hasClass('hidden') || target.hasClass('drawerHide') ? openDrawer(target) : closeDrawer(target);
-		// $(target).css('margin-left') === '0px' ? closeDrawer(target) : openDrawer(target);
 		$(drawer).removeClass('hidden');
 		$(drawer).position().left > -150 ? closeDrawer() : openDrawer();
 	});
@@ -24,7 +21,6 @@ $(document).ready(function () {
 
 function openDrawer () {
 	// Move in the drawer
-	// $(drawer).css('margin-left', '0px');
 	$(drawer).css('transform', 'translateX(0px)');
 
 	// Fade out the body (besides the drawer)
@@ -33,7 +29,6 @@ function openDrawer () {
 }
 function closeDrawer () {
 	// Move out the drawer
-	// $(drawer).css('margin-left', '-300px');
 	$(drawer).css('transform', 'translateX(-300px)');
 
 	// Fade in the body (besides the drawer)
@@ -51,4 +46,4 @@ function hasParentWithClass (element, className) {
 	}
 }
 
-particlesJS.load('yo', '/assets/nice.json', function() {});
+particlesJS.load('yo', '/assets/nice.json', function () {});
